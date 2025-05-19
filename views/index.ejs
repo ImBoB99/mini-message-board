@@ -12,6 +12,9 @@
     <h2> <%= message.text %> </h2>
     <p>User: <%= message.user %></p>
     <p>Date <%= message.added %></p>
+    <a href="/messages/<%= message.id %>">Open</a>
   <% }) %>
+
+  <%- include("form") %>
 </body>
 </html>
