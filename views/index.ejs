@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Page</title>
+</head>
+<body>
+  <h1>Messages Rendered</h1>
+
+  <% messages.map((message) => { %>
+    <h2> <%= message.text %> </h2>
+    <p>User: <%= message.user %></p>
+    <p>Date <%= message.added %></p>
+  <% }) %>
+</body>
+</html>
