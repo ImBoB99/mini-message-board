@@ -9,9 +9,9 @@
   <h1>Messages Rendered</h1>
 
   <% messages.map((message) => { %>
-    <h2> <%= message.text %> </h2>
-    <p>User: <%= message.user %></p>
-    <p>Date <%= message.added %></p>
+    <h2> <%= message.message %> </h2>
+    <p>User: <%= message.username %></p>
+    <p>Date <%= message.posted_at.toLocaleString() %></p>
     <a href="/messages/<%= message.id %>">Open</a>
   <% }) %>
 

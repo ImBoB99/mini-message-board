@@ -1,9 +1,9 @@
 <html>
   <head><title>Message Details</title></head>
   <body>
-    <h1>Message from <%= message.user %></h1>
-    <p><%= message.text %></p>
-    <p><small>Added on <%= message.added.toLocaleString() %></small></p>
+    <h1>Message from <%= message.username %></h1>
+    <p><%= message.message %></p>
+    <p><small>Added on <%= message.posted_at %></small></p>
     <a href="/">Back to messages</a>
   </body>
 </html>

@@ -1,10 +1,11 @@
 const { Router } = require("express");
 const messageRouter = Router();
-const messages = require("../messages");
+const db = require("../db/queries")
 
-messageRouter.get("/:id", (req, res) => {
+messageRouter.get("/:id", async (req, res) => {
   const id = Number(req.params.id);
-  const message = messages.find(m => m.id === id);
+  const result = await db.getMessageByID(id);
+  const message = result[0];
 
   if (!message) {
     return res.status(404).send("Message not found");
